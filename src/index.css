@@ -1,0 +1,64 @@
+body {
+    font: 10pt Helvetica, sans-serif;
+    color: #999;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#grid {
+    width: 100%;
+    height: 100%;
+    background: grey;
+    /* transform: rotate(180deg); */
+}
+
+.col {
+    background: grey;
+    float:right;
+    width: 10%;
+    height: 100%;
+    overflow: visible;
+}
+.block {
+    width: 100%;
+    height: 10%;
+    background: red;
+    float: left;
+    margin: 0;
+    padding: 0;
+    transition: all;
+    /* transform: rotate(180deg); */
+    min-width: 80px;
+    min-height: 50px;
+}
+
+.active {
+    box-shadow: inset 0 0 10px #000000;
+}
+
+
+.blinking {
+    animation: blink 5s 0s normal forwards ease-in-out; }
+
+@keyframes blink {
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        transform: translate3d(-350px,700px,0);
+        opacity: 0;
+    } 
+}
+
+.grid {
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
